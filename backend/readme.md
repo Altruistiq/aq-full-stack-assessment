@@ -14,20 +14,24 @@ This repo will help you kick-start your live coding session. The following has b
 - babel
 - axios
 - lodash
+- vue
+- vuex
 
 Hot reloading is enabled (backend) and tests rerun when code changes.
 
 ### Setup
 Clone this repo, then
 ```
-npm i
+cd backend && npm i
+cd fronted && npm i
 ```
 
 ### Run it
 Code automatically reloads upon code changes. You will need to refresh your browser if you use it.
 
 ```
-npm start
+cd backend && npm start
+cd frontend && npm start
 ```
 
 ### Run tests
@@ -40,6 +44,7 @@ npm test
 Please read through all the tasks to understand the full scope of this assessment.
 
 ## Task 1 - Create an API that returns the total emission per country per year (~15min)
+Create an api endpoint at `/chart-data`.\
 To get the data for this API, you will use the [footprint api](https://data.footprintnetwork.org/#/api) which has already
 been setup for you. Use as follows:
 
@@ -53,13 +58,7 @@ await footprintApi.getCountries()
 await footprintApi.getDataForCountry(countryCode)
 
 ```
-## Task 2 - Write tests (~10min)
-Write test(s) to make sure your API works as expected.
-
-## Task 3 - Fetch the data in the browser (~10min)
-Use the API endpoint you just created to get the results in the browser.
-
-## Task 4 - Create an animated chart (~40 min)
+## Task 2 - Create an animated chart (~40 min)
 Create an animated chart as per this example, but style it as per the Figma design<br/><br/>
 ![https://miro.medium.com/max/1600/1*37uCN6y1WyLukxwCadhWRw.gif](https://miro.medium.com/max/1600/1*37uCN6y1WyLukxwCadhWRw.gif)
 

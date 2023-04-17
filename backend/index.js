@@ -1,9 +1,11 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 import footprintApi from './footprintApi'
 
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.json())
 
 app.get('/', async (req, res) => {    
@@ -18,6 +20,13 @@ app.get('/', async (req, res) => {
   console.log(country.slice(0, 5))
 })
 
-app.listen(5000,() => {     
-  console.log('app is listening on port 5000')
+app.get('/chart-data', async (req, res) => {    
+  // Your code here
+  res.json({
+    data: []
+  })
+})
+
+app.listen(5005,() => {     
+  console.log('app is listening on port 5005')
 })
