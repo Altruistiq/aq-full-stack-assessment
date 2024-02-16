@@ -2,10 +2,10 @@ import axios from 'axios'
 
 export default {
   get(apiUrl) {
-    return axios.get(apiUrl, {}, {
+    return axios.get(apiUrl, {
       auth: {
         username: 'any-user-name',
-        password: process.env.API_KEY
+        password: '...' // API key should go here
       }
     })
   },
